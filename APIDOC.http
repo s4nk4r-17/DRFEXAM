@@ -1,0 +1,42 @@
+#API for creating user account
+
+###
+
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+    "username":"django",
+    "email":"django@gmail.com",
+    "password":"django"
+}
+
+#API for listing all meals of a user
+###
+
+GET http://127.0.0.1:8000/api/meals/
+Authorization: Basic django:django
+
+#API for adding meals of a user
+###
+
+POST http://127.0.0.1:8000/api/meals/
+Content-Type: application/json
+Authorization: Basic django:django
+
+{
+    "name": "Rice",
+    "meal_type": "Lunch",
+    "calories": 150
+}
+
+#API for fetching meal detail
+###
+GET http://127.0.0.1:8000/api/details/
+Authorization: Basic django:django
+
+#API for fetching calorie
+###
+
+GET http://127.0.0.1:8000/api/calories/
+Authorization: Basic django:django
