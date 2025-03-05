@@ -26,5 +26,5 @@ class MealSerializer(serializers.ModelSerializer):
 
         fields="__all__"
 
-        read_only_fields=['id','user']
+        read_only_fields=['id','user','date']
 
